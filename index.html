@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/29/hello-hexo/">自己的 blog 自己架</a>
+      <a class="article-title" href="/2017/03/29/hello-hexo/">自己的 blog 自己架 - Hexo X Github</a>
     </h1>
   
 
@@ -83,23 +83,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">myObj.key = value;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">myObj.key = value;</div></pre></td></tr></table></figure>
+        <p><a href="https://github.com/" target="_blank" rel="external">GitHub</a> 有提供 <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> 功能，讓使用者可以放靜態網站<br>利用編輯器(e.g., Brackets)編輯 <a href="http://markdown.tw/" target="_blank" rel="external">Markdown</a> 檔案<br>再利用 <a href="https://hexo.io/zh-tw/" target="_blank" rel="external">Hexo</a> 來將 <a href="http://markdown.tw/" target="_blank" rel="external">Markdown</a> 檔案編譯成 html 並佈署到 GitHub 上<br>這樣 “自己的 blog 自己架” 的成就就達成啦!!</p>
+<font color="red">使用的 os 為 Windows</font>
+
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><ul>
+<li>Git: 下載並安裝 <a href="https://git-scm.com/download/win" target="_blank" rel="external">Git</a></li>
+<li>Node.js: 下載並安裝 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>Hexo: 打開 Node.js 的 command prompt 並執行以下語法，該語法是透過 npm 去安裝 Hexo</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="申請帳號"><a href="#申請帳號" class="headerlink" title="申請帳號"></a>申請帳號</h3><ul>
+<li>GitHub: 申請 <a href="https://github.com/" target="_blank" rel="external">GitHub</a> 帳號並建立一個 repository，名稱可以用 {帳號}.github.io</li>
+</ul>
+<h3 id="初始-Hexo-and-Git"><a href="#初始-Hexo-and-Git" class="headerlink" title="初始 Hexo and Git"></a>初始 Hexo and Git</h3><p>一旦 Hexo 完成後，請執行下列指令，Hexo 會在指定資料夾中建立所有您需要的檔案。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt;</div><div class="line"><span class="built_in">cd</span> &lt;folder&gt;</div><div class="line">npm install</div><div class="line">git init</div></pre></td></tr></table></figure>
+<h3 id="配置-config"><a href="#配置-config" class="headerlink" title="配置 config"></a>配置 config</h3><p>該 folder 會建立在 C:\Users\UserName 底下<br>在該 folder 底下找到 _config.yml 檔案並設定</p>
+<p>Site:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> <span class="string">Coding</span></div><div class="line"><span class="attr">author:</span> <span class="string">Jun</span></div></pre></td></tr></table></figure>
+<p>Deployment:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;帳號&#125;/&#123;帳號&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p>建立 md 檔:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &#123;文章名稱&#125;</div></pre></td></tr></table></figure>
+<p>編輯 md 檔:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source/_posts/&#123;文章名稱&#125;.md</div></pre></td></tr></table></figure>
+<p>編譯 html 並佈署:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate <span class="_">-d</span></div></pre></td></tr></table></figure>
+<p>可以快樂的寫文章了!!</p>
+<h3 id="相關連結"><a href="#相關連結" class="headerlink" title="相關連結"></a>相關連結</h3>
       
     </div>
     <footer class="article-footer">
       <a data-url="https://junlol.github.io/2017/03/29/hello-hexo/" data-id="cj0upv9m10001w4f04pzq8hxu" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -116,9 +134,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -137,7 +169,7 @@
       <ul>
         
           <li>
-            <a href="/2017/03/29/hello-hexo/">自己的 blog 自己架</a>
+            <a href="/2017/03/29/hello-hexo/">自己的 blog 自己架 - Hexo X Github</a>
           </li>
         
       </ul>
